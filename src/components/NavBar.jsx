@@ -6,16 +6,22 @@ import "../components/NavBar.css";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 import { Link } from "react-router-dom";
 import Application from "../pages/Application.jsx";
-
+import { useNavigate } from "react-router-dom";
 const NavBar = () => {
-  
   const { openSignIn } = useClerk();
   const { user } = useUser();
-
+  const navigate = useNavigate();
   return (
     <div className="nav-bar-container">
       <div className="nav-logo-container">
-        <img src={assets.logo} alt="" />
+        <img
+          onClick={() => {
+            navigate(`/`);
+            scrollTo(0, 0);
+          }}
+          src={assets.logo}
+          alt=""
+        />
       </div>
 
       {user ? (

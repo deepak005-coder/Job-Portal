@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import PropTypes from "prop-types";
-
+import { useNavigate } from "react-router-dom";
 const JobCard = ({ currentPage, jobsData }) => {
   //console.log(jobsData);
-
+  const navigate = useNavigate();
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
       {jobsData
@@ -48,10 +48,22 @@ const JobCard = ({ currentPage, jobsData }) => {
 
                 {/* Buttons */}
                 <div className="flex gap-3">
-                  <button className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300">
+                  <button
+                    onClick={() => {
+                      navigate(`/apply-jobs/${id}`);
+                      scrollTo(0, 0);
+                    }}
+                    className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300"
+                  >
                     Apply
                   </button>
-                  <button className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300">
+                  <button
+                    onClick={() => {
+                      navigate(`/apply-jobs/${id}`);
+                      scrollTo(0, 0);
+                    }}
+                    className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition-colors duration-300"
+                  >
                     Learn More
                   </button>
                 </div>
