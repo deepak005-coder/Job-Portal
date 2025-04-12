@@ -162,9 +162,9 @@ const ApplyJobs = () => {
     <div className="min-h-screen bg-gray-50">
       <NavBar />
       {jobData && jobData.companyId ? (
-        <div className="flex items-center justify-center p-4 sm:p-6 mt-4">
-          <div className="w-full max-w-7xl rounded-lg border border-[#0260FF] bg-[#F2F7FF] p-6 sm:p-8 shadow-md">
-            <div className="flex flex-col lg:flex-row justify-between h-full items-center gap-6">
+        <div className="flex items-center  justify-center p-4 sm:p-6 mt-4">
+          <div className="w-full max-w-7xl  min-h-[250px] rounded-lg border border-[#0260FF] bg-[#F2F7FF] p-6 sm:p-8 shadow-md">
+            <div className="flex flex-col lg:flex-row justify-between h-full items-center pt-11 gap-6">
               {/* Left Content */}
               <div className="flex items-center gap-6 w-full lg:w-auto">
                 <img
