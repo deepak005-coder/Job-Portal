@@ -138,7 +138,7 @@ const JobCard = ({ currentPage, jobsData }) => {
                 </button>
                 <button
                   onClick={() => {
-                    navigate(`/apply-jobs/${id}`);
+                    navigate(`/apply-jobs/${jobsData._id}`);
                     scrollTo(0, 0);
                   }}
                   className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm hover:bg-gray-300 transition"
