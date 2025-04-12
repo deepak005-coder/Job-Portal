@@ -25,6 +25,7 @@ export const AppContextProvider = ({ children }) => {
       console.log(error);
     }
   };
+  
   useEffect(() => {
     fetchJobs();
   }, []);
